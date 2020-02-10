@@ -27,7 +27,7 @@ var person1 = {
 // 	activity5Hours : 
 // };
 
-// Action that the user makes 
+// Action that the user makes dfa
 $('#submitUsersInput').click(function(){
 	person1.activity1 = documnent.getElementById('activity1P1');
 	console.log(person1);
