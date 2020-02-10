@@ -38,16 +38,38 @@ function addUsersHolidayDetails(){
 	}
 }
 
+// Clears outputs
+function clearOutput(){
+	document.getElementById('totalTimeP1').innerHTML = '';
+	document.getElementById('totalTimeP2').innerHTML = '';
+}
+
 // Calculates total activity hours
 function calculateTotalHours(){
 	totalTimeSpentP1 = person1.activity1Hours + person1.activity2Hours + person1.activity3Hours + person1.activity4Hours + person1.activity5Hours;
 	totalTimeSpentP2 = person2.activity1Hours + person2.activity2Hours + person2.activity3Hours + person2.activity4Hours + person2.activity5Hours;
+
+	// Writes the total amount of time that person 1 did activities
+	document.getElementById('totalTimeP1').innerHTML += 
+		'<h2>' + person1.name + ' Total Time Spent Doing Activites</h2>' + 
+		'<p>Total amount of time doing activities over the summer break is: <b>' + totalTimeSpentP1 + ' hours</b></p>';
+	document.getElementById('totalTimeP2').innerHTML += 
+		'<h2>' + person2.name + ' Total Time Spent Doing Activites</h2>' + 
+		'<p>Total amount of time doing activities over the summer break is: <b>' + totalTimeSpentP2 + ' hours</b></p>';
+}
+
+// Finds the person who spent the most time doing activities over the holidays
+function findMostActivePerson(){
+	if (totalTimeSpentP1 > totalTimeSpentP2) {
+
+	}
 }
 
 // When the user clicks the submit button, calls functions
 $('#submitUsersInput').click(function(){
 	addUsersHolidayDetails();
-	calculateTotalHours()
+	clearOutput();
+	calculateTotalHours();
 	console.log(person1);
 	console.log(person2);
 	console.log(totalTimeSpentP1);
