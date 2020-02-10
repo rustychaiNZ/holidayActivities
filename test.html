@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<!-- My css -->
+		<link rel="stylesheet" href="style/stylesheet.css">
+
+		<title>Hello, world!</title>
+	</head>
+	<body class="bg-light">
+		<!-- Website header -->
+		<div class="display-1 bg-dark">
+			<h1 class="display-1 text-light text-center py-5">Holiday Activities</h1>
+		</div>
+
+		<!-- Website body -->
+		<div class="container bg-white">
+			<!-- Question Sections -->
+			<div class="row">
+				<!-- First list of inputs -->
+				<div class="col-xl-6">
+					<h2 class="text-center">Person 1</h2>
+					<!-- Form for taking user's inputs -->
+					<form>
+						<div class="form-group">
+							<label for="nameP1">Name</label>
+							<input type="text" class="form-control" id="nameP1" placeholder="First Name">
+						</div>
+						<div class="row">
+							<div class="col-10">
+								<div class="form-group">
+									<label for="activity1P1">Activity 1</label>
+									<input type="text" class="form-control" id="activity1P1" placeholder="e.g. reading, running, etc..">
+									<label for="activity2P1">Activity 2</label>
+									<input type="text" class="form-control" id="activity2P1" placeholder="e.g. reading, running, etc..">
+									<label for="activity3P1">Activity 3</label>
+									<input type="text" class="form-control" id="activity3P1" placeholder="e.g. reading, running, etc..">
+									<label for="activity4P1">Activity 4</label>
+									<input type="text" class="form-control" id="activity4P1" placeholder="e.g. reading, running, etc..">
+									<label for="activity5P1">Activity 5</label>
+									<input type="text" class="form-control" id="activity5P1" placeholder="e.g. reading, running, etc..">
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="form-group">
+									<label for="hoursDoingActivity1P1">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity1P1">
+									<label for="hoursDoingActivity2P1">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity2P1">
+									<label for="hoursDoingActivity3P1">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity3P1">
+									<label for="hoursDoingActivity4P1">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity4P1">
+									<label for="hoursDoingActivity5P1">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity5P1">
+								</div>
+							</div>
+						</div>
+					</form>					
+				</div>
+				<!-- Second list of inputs -->
+				<div class="col-xl-6">
+					<h2 class="text-center">Person 2</h2>
+					<!-- Form for taking user's inputs -->
+					<form>
+						<div class="form-group">
+							<label for="nameP2">Name</label>
+							<input type="text" class="form-control" id="nameP2" placeholder="First Name">
+						</div>
+						<div class="row">
+							<div class="col-10">
+								<div class="form-group">
+									<label for="activity1P2">Activity 1</label>
+									<input type="text" class="form-control" id="activity1P2" placeholder="e.g. reading, running, etc..">
+									<label for="activity2P2">Activity 2</label>
+									<input type="text" class="form-control" id="activity2P2" placeholder="e.g. reading, running, etc..">
+									<label for="activity3P2">Activity 3</label>
+									<input type="text" class="form-control" id="activity3P2" placeholder="e.g. reading, running, etc..">
+									<label for="activity4P2">Activity 4</label>
+									<input type="text" class="form-control" id="activity4P2" placeholder="e.g. reading, running, etc..">
+									<label for="activity5P2">Activity 5</label>
+									<input type="text" class="form-control" id="activity5P2" placeholder="e.g. reading, running, etc..">
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="form-group">
+									<label for="hoursDoingActivity1P2">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity1P2">
+									<label for="hoursDoingActivity2P2">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity2P2">
+									<label for="hoursDoingActivity3P2">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity3P2">
+									<label for="hoursDoingActivity4P2">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity4P2">
+									<label for="hoursDoingActivity5P2">Hours Spent</label>
+									<input type="number" class="form-control" id="hoursDoingActivity5P2">
+								</div>
+							</div>
+						</div>
+					</form>	
+				</div>
+			</div>
+			<!-- Submit Button -->
+			<div class="row">
+				<!-- Submit form inputs -->
+				<button class="btn btn-lg btn-block btn-outline-primary" id="submitUsersInput">Submit Activities</button>
+				<!-- Person  -->
+			</div>
+			<!-- Calculation section -->
+			<div class="row">
+				<!-- End read out - person 1 -->
+				<div class="col-xl-6" id="totalTimeP1">
+					
+				</div>
+				<!-- End read out - person 2 -->
+				<div class="col-xl-6" id="totalTimeP2">
+					
+				</div>
+			</div>
+			<!-- Shows output for most productive partisapent -->
+			<div class="row" id="mostProductive">
+				
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<!-- My Js file -->
+		<script src="script/script.js"></script>
+	</body>
+</html>

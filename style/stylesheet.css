@@ -1,0 +1,22 @@
+form{
+	margin: 25px auto;
+}
+.display-1{
+	margin: 0;
+}
+.container{
+	max-width: 80%;
+	min-height: 250px;
+	margin-top: 0;
+}
+.btn-block{
+	margin-bottom: 25px;
+}
+
+
+/*Media Queries*/
+@media only screen and (max-width: 650px) {
+	.container{
+		max-width: 100%;
+	}
+}
