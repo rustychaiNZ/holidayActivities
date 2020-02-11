@@ -42,6 +42,7 @@ function addUsersHolidayDetails(){
 function clearOutput(){
 	document.getElementById('totalTimeP1').innerHTML = '';
 	document.getElementById('totalTimeP2').innerHTML = '';
+	document.getElementById('mostProductive').innterHtml = '';
 }
 
 // Calculates total activity hours
@@ -61,7 +62,12 @@ function calculateTotalHours(){
 // Finds the person who spent the most time doing activities over the holidays
 function findMostActivePerson(){
 	if (totalTimeSpentP1 > totalTimeSpentP2) {
-
+		document.getElementById('mostProductive').innerHTML += 
+			'<h2>The Most Productive Person</h2>' + '<p>' + person1.name + ' with a total numer of hours of <b>' + totalTimeSpentP1 + '</b></p>';
+	}
+	else if (totalTimeSpentP1 < totalTimeSpentP2) {
+		document.getElementById('mostProductive').innerHTML += 
+			'<h2>The Most Productive Person</h2>' + '<p>' + person2.name + ' with a total numer of hours of <b>' + totalTimeSpentP2 + '</b></p>';
 	}
 }
 
@@ -70,6 +76,7 @@ $('#submitUsersInput').click(function(){
 	addUsersHolidayDetails();
 	clearOutput();
 	calculateTotalHours();
+	findMostActivePerson();
 	console.log(person1);
 	console.log(person2);
 	console.log(totalTimeSpentP1);
